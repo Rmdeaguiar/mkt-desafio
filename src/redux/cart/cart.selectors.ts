@@ -1,4 +1,3 @@
-import rootReducer from "../root-reducer";
 import { RootState } from "../../types";
 
 export const selectProductsCount = (rootReducer: RootState) => {
