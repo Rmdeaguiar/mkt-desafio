@@ -14,7 +14,7 @@ flex-wrap: wrap;
 
   `;
 
-  export const Produt = styled.div`
+  export const Product = styled.div`
   width: 218px;
   height: 285px;
   box-shadow: 0px 2px 8px 0px #00000022;

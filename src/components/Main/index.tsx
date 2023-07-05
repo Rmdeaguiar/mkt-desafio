@@ -2,6 +2,8 @@ import * as Sc from './styles';
 import Bag from '../../assets/bag.svg'
 import instance from '../../services/api';
 import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addProductToCart } from '../../redux/actions';
 
 
 export function Main() {
@@ -35,26 +37,32 @@ export function Main() {
     }
   }
 
+  const dispatch = useDispatch()
+  const handleProductClick = (product: Product) => {
+    dispatch(addProductToCart(product))
+
+  }
+
   return (
     <Sc.Container>
       <Sc.ProductsList>
         {products.map((product) => (
           <div key={product.id}>
-            <Sc.Produt>
+            <Sc.Product>
               <img src={product.photo} alt='photo' />
               <Sc.Description>
                 <h3>{product.name}</h3>
-                <h4>R${product.price.slice(0,-3)}</h4>
+                <h4>R${product.price.slice(0, -3)}</h4>
               </Sc.Description>
               <p>{product.description}</p>
               <Sc.AddBag>
                 <img src={Bag} alt='bag' />
-                <span>COMPRAR</span>
+                <span onClick={()=>handleProductClick(product)}>COMPRAR</span>
               </Sc.AddBag>
-            </Sc.Produt>
+            </Sc.Product>
           </div>
         ))}
       </Sc.ProductsList>
     </Sc.Container>
   )
-}
+  }

@@ -34,7 +34,7 @@ export const Container = styled.div`
 
   export const AllProducts = styled.div`
   display: flex;
-  flex-direction: column
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 0px 25px;
@@ -76,6 +76,11 @@ export const Container = styled.div`
 
   h3{
     font-size: 14px;
+  }
+
+  img {
+    width: 46px;
+    position: relative;
   }
   `
 
