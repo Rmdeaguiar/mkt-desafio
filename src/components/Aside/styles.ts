@@ -14,6 +14,8 @@ export const Container = styled.div`
   box-shadow: -5px 0px 6px 0px #00000021;
   padding-top: 25px;
   position: fixed;
+  overflow-y: auto;
+
   `
 
   export const TitleContent = styled.div`
@@ -23,7 +25,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 1.4rem;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 
 
   img {

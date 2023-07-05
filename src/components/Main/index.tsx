@@ -3,23 +3,13 @@ import Bag from '../../assets/bag.svg'
 import instance from '../../services/api';
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addProductToCart } from '../../redux/actions';
+import { addProductToCart } from '../../redux/cart/actions';
+import { Product } from '../../types'
 
 
 export function Main() {
 
-  type Product = {
-    id: number
-    name: string
-    brand: string
-    description: string
-    price: string
-    photo: string
-    createdAt: string
-    updatedAt: string
-  }
-
-  const [products, setProducts] = useState<Product[]>([{ id: 1, name: '', brand: '', description: '', price: '', photo: '', createdAt: '', updatedAt: '' }])
+  const [products, setProducts] = useState<Product[]>([{ id: 1, name: '', brand: '', description: '', price: '', photo: '', createdAt: '', updatedAt: '', quantity: 0 }])
 
   useEffect(() => {
     loadProducts()
