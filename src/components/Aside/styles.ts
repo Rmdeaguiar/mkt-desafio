@@ -70,6 +70,7 @@ export const Container = styled.div`
 
   span {
     font-size: 1.3rem;
+    font-weight: 400;
     line-height: 17px;
     max-width: 105px;
     display: flex;
@@ -114,6 +115,10 @@ export const Container = styled.div`
   div {
     border: 0.3px solid #BFBFBF;
     height: 10px;
+  }
+  
+  span{ 
+    font-size:1rem
   }
 
   span:first-child, span:last-child {

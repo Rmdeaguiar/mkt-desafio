@@ -9,6 +9,11 @@ export const Container = styled.div`
   padding: 30px;
   color: #FFFFFF;
   height: 100px;
+
+  span {
+    font-weight: 300;
+    font-size: 2rem;
+  }
   `;
 
 export const ChartBox = styled.div`

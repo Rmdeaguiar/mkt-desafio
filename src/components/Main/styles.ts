@@ -16,7 +16,7 @@ flex-wrap: wrap;
 
   export const Product = styled.div`
   width: 218px;
-  height: 285px;
+  height: 300px;
   box-shadow: 0px 2px 8px 0px #00000022;
   border-radius: 10px;
   display: flex;
@@ -27,13 +27,14 @@ flex-wrap: wrap;
   p {
     font-size: 1rem;
     line-height: 10px;
+    margin: 0px 10px;
+    
   }
 
   img { 
-    width: 110px;
+    height: 138px;
+    margin-top: 8px;
   }
-
-
   `;
 
   export const Description = styled.div`
@@ -45,6 +46,7 @@ flex-wrap: wrap;
 
   h3 {
     font-size: 1.6rem;
+    height: 30px;
   }
 
   h4 { 

@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <Sc.Container>
-      <h1>Tech Store</h1>
+      <h1>MKS<span> Sistemas</span></h1>
       <Sc.ChartBox >
         <img src={Chart} alt='carrinho' onClick={() => handleModal()} />
         <h2 onClick={() => handleModal()}>{productsCount}</h2>
