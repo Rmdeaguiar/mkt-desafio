@@ -5,10 +5,14 @@ import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addProductToCart } from '../../redux/cart/actions';
 import { Product } from '../../types'
+import { useLoading } from '../../stores/loadingStore';
+import { Loading } from '../Loading';
 
 export function Main() {
 
   const [products, setProducts] = useState<Product[]>([{ id: 1, name: '', brand: '', description: '', price: '', photo: '', createdAt: '', updatedAt: '', quantity: 0 }])
+
+  const { loading, setLoading } = useLoading()
 
   useEffect(() => {
     loadProducts()
@@ -17,9 +21,11 @@ export function Main() {
 
   async function loadProducts() {
     try {
+      setLoading(true)
       const response = await instance.get('', {
       });
       setProducts(response.data.products)
+      setLoading(false)
     } catch (error) {
       console.log(error)
     }
@@ -33,6 +39,7 @@ export function Main() {
 
   return (
     <Sc.Container>
+      {loading && <Loading/>}
       <Sc.ProductsList>
         {products.map((product) => (
           <div key={product.id}>
@@ -45,7 +52,7 @@ export function Main() {
               <p>{product.description}</p>
               <Sc.AddBag>
                 <img src={Bag} alt='bag' />
-                <span onClick={()=>handleProductClick(product)}>COMPRAR</span>
+                <span onClick={() => handleProductClick(product)}>COMPRAR</span>
               </Sc.AddBag>
             </Sc.Product>
           </div>
@@ -53,4 +60,4 @@ export function Main() {
       </Sc.ProductsList>
     </Sc.Container>
   )
-  }
+}
