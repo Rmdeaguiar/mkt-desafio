@@ -40,7 +40,8 @@ export function Aside() {
         </Sc.TitleContent>
         <Sc.AllProducts>
           {products.map(product => (
-            <Sc.Products key={product.id}>
+            <div key={product.id}>
+            <Sc.Products >
               <img src={Close} alt='close' onClick={()=>handleRemoveItem(product)} />
               <Sc.Product>
                 <img src={product.photo} alt='photo' />
@@ -55,9 +56,10 @@ export function Aside() {
                     <span onClick={()=>handleAddItem(product)}>+</span>
                   </Sc.SumNumber>
                 </Sc.Quantity>
-                <h3>R$ {product.price.slice(0, -3)}</h3>
+                <h3>R$ {product.price.slice(0,-3)}</h3>
               </Sc.Product>
             </Sc.Products>
+            </div>
           ))}
         </Sc.AllProducts>
         <Sc.Total>

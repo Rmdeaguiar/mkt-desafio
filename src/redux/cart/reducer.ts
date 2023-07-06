@@ -35,7 +35,9 @@ const cartReducer = (state = initialState, action: any) => {
         case CartActionTypes.SUM_PRODUCT:
             return {
                 ...state, products: state.products.map((product: Product) => (
-                    product.id === action.payload.id && { ...product, quantity: product.quantity! + 1 }
+                    product.id === action.payload.id ?
+                        { ...product, quantity: product.quantity! + 1 }
+                        : product 
                 ))
             }
 

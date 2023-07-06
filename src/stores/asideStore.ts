@@ -5,7 +5,6 @@ export function useAside() {
 
     function handleModal(){
         setAside(!aside)
-        console.log(aside)
       }
 
     return {
