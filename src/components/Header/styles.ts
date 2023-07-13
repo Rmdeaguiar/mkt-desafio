@@ -30,6 +30,7 @@ export const ChartBox = styled.div`
   margin-right: 10px;
  }
 
+
  h2 {
   font-size: 2rem;
  }

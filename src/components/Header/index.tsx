@@ -5,7 +5,6 @@ import { Aside } from '../Aside';
 import { useSelector } from 'react-redux';
 import { selectProductsCount } from '../../redux/cart/cart.selectors';
 
-
 export function Header() {
   const { aside, handleModal } = useAside();
   const productsCount = useSelector(selectProductsCount);
@@ -17,7 +16,7 @@ export function Header() {
         <img src={Chart} alt='carrinho' onClick={() => handleModal()} />
         <h2 onClick={() => handleModal()}>{productsCount}</h2>
       </Sc.ChartBox>
-      {aside === true && <Aside />}
+      {aside && <Aside />}
     </Sc.Container>
   )
 }

@@ -12,12 +12,14 @@ export function Main() {
 
   const [products, setProducts] = useState<Product[]>([{ id: 1, name: '', brand: '', description: '', price: '', photo: '', createdAt: '', updatedAt: '', quantity: 0 }])
 
-  const { loading, setLoading } = useLoading()
+  const { loading, setLoading } = useLoading();
+  const effect: boolean = true;
+
 
   useEffect(() => {
     loadProducts()
     return;
-  }, []);
+  }, [effect]);
 
   async function loadProducts() {
     try {
@@ -34,7 +36,6 @@ export function Main() {
   const dispatch = useDispatch()
   const handleProductClick = (product: Product) => {
     dispatch(addProductToCart(product))
-
   }
 
   return (
@@ -51,7 +52,7 @@ export function Main() {
               </Sc.Description>
               <p>{product.description}</p>
               <Sc.AddBag>
-                <img src={Bag} alt='bag' />
+                <img src={Bag} alt='sacola' />
                 <span onClick={() => handleProductClick(product)}>COMPRAR</span>
               </Sc.AddBag>
             </Sc.Product>

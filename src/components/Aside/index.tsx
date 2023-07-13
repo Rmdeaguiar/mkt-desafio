@@ -10,6 +10,7 @@ import { selectCartTotalPrice } from '../../redux/cart/cart.selectors';
 export function Aside() {
   const { setAside, aside, handleModal } = useAside();
   const dispatch = useDispatch()
+  const effect: boolean = true;
 
   const chartTotalPrice = useSelector(selectCartTotalPrice)
 
@@ -27,7 +28,7 @@ export function Aside() {
 
   useEffect(() => {
     setAside(true)
-  }, []);
+  }, [effect]);
 
   const { products } = useSelector((rootReducer: RootState) => rootReducer.cartReducer);
 
