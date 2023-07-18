@@ -5,7 +5,7 @@ import store from '../../redux/store';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node'
 
-describe('Header Component', () => {
+describe('Main Component', () => {
     const worker = setupServer(
         rest.get("https://mks-challenge-api-frontend.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=ASC", async (req, res, ctx) => {
             return res(ctx.json([{
