@@ -44,7 +44,7 @@ export function Aside() {
             <Sc.Products >
               <img src={Close} alt='close' onClick={()=>handleRemoveItem(product)} />
               <Sc.Product>
-                <img src={product.photo} alt='product-image' />
+                <img src={product.photo} alt='product' />
                 <span>{product.name}</span>
                 <Sc.Quantity>
                   <p>Qtd</p>
