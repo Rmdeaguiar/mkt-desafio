@@ -45,7 +45,7 @@ export function Aside() {
               <img src={Close} alt='close' onClick={()=>handleRemoveItem(product)} />
               <Sc.Product>
                 <img src={product.photo} alt='product' />
-                <span>{product.name}</span>
+                <h4>{product.name}</h4>
                 <Sc.Quantity>
                   <p>Qtd</p>
                   <Sc.SumNumber>
@@ -65,7 +65,7 @@ export function Aside() {
         <Sc.Total>
           <Sc.Price>
             <h3>Total:</h3>
-            <h3>RS {chartTotalPrice}</h3>
+            <h3>R$ {chartTotalPrice}</h3>
           </Sc.Price>
           <Sc.Finish>
             <h4>Finalizar Compra</h4>

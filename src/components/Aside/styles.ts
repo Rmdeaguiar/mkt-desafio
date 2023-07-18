@@ -36,9 +36,9 @@ export const Container = styled.div`
 
   export const AllProducts = styled.div`
   display: flex;
+  height: 100%;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
   padding: 0px 25px;
   `
   ;
@@ -67,6 +67,13 @@ export const Container = styled.div`
   height: 100%;
   color: #000000;
   gap: 10px;
+ 
+  h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 17px;
+    width: 105px;
+  }
 
   span {
     font-size: 1.3rem;
@@ -91,6 +98,15 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+
+  span {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 17px;
+    max-width: 105px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
 
   p {
