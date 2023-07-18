@@ -17,7 +17,6 @@ export function Main() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     loadProducts()
-    return;
   }, []);
 
   async function loadProducts() {
