@@ -14,6 +14,7 @@ export function Main() {
 
   const { loading, setLoading } = useLoading();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     loadProducts()
     return;
