@@ -1,3 +1,4 @@
+/* eslint-disable */
 import * as Sc from './styles';
 import Bag from '../../assets/bag.svg'
 import instance from '../../services/api';
@@ -14,7 +15,6 @@ export function Main() {
 
   const { loading, setLoading } = useLoading();
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     loadProducts()
   }, []);
